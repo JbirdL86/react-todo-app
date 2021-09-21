@@ -1,3 +1,5 @@
+/* eslint-disable arrow-parens */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/state-in-constructor */
 /* eslint-disable react/prefer-stateless-function */
@@ -8,15 +10,19 @@ class InputTodo extends Component {
     title: '',
   };
 
+  onChange = e => {
+    console.log('hello');
+  };
+
   render() {
     return (
       <form>
-        <input 
+        <input
           type="text"
           placeholder="Add Todo..."
           value={this.state.title}
           onChange={this.onChange}
-      />
+        />
         <button type="button">Submit</button>
       </form>
     );
