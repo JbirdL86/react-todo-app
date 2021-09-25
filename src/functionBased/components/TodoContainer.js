@@ -69,7 +69,7 @@ const TodoContainer = () => {
     <>
       <Navbar />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <div className="container">
             <div className="inner">
               <Header />
@@ -83,7 +83,9 @@ const TodoContainer = () => {
             </div>
           </div>
         </Route>
-        <Route path="/about" component={About} />
+        <Route path="/about">
+          <About />
+        </Route>
         <Route path="*">
           <NotMatch />
         </Route>
